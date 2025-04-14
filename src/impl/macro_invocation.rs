@@ -11,11 +11,21 @@ impl Parse for MacroInvocationArguments {
     fn parse(mut token: Token, lexer: &mut Lexer, errors: &mut Vec<ParseError>) -> Option<Self> {
         let mut arguments = Vec::new();
         let mut state = lexer.save_state();
+        let mut opening_parenthesis_count = 0;
 
-        while !matches!(
-            token.token_type,
-            TokenType::EndOfFile | TokenType::Symbol(Symbol::ClosingParenthesis)
-        ) {
+        loop {
+            if token == TokenType::EndOfFile {
+                break;
+            } else if token == TokenType::Symbol(Symbol::ClosingParenthesis) {
+                if opening_parenthesis_count == 0 {
+                    break;
+                }
+
+                opening_parenthesis_count -= 1;
+            } else if token == TokenType::Symbol(Symbol::OpeningParenthesis) {
+                opening_parenthesis_count += 1;
+            }
+
             arguments.push(token);
 
             state = lexer.save_state();
