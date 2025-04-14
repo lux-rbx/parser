@@ -1,4 +1,4 @@
-# Luau Parser
+# Lux Parser
 
 A blazingly fast, lossless, Luau parser, with robust error recovery. Lossless, meaning that none of the details of the code are lost, and that all of it is stored in the returned syntax tree, and thus, the original source code can be printed back by using the `Cst::print` function.
 
@@ -19,7 +19,7 @@ and appropriate errors for these missing tokens are stored to be used by consume
 ## Usage
 
 ```rust
-use luau_parser::prelude::Parser;
+use lux_parser::prelude::Parser;
 
 let code = r#"local foo = "Hello, World!""#;
 let uri = ""; // This should be the path of the file being parsed
