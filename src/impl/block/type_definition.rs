@@ -7,7 +7,7 @@
 //! * [`GenericDeclarationParameter`]
 //! * [`GenericParameterInfoDefault`]
 
-use luau_lexer::prelude::{
+use lux_lexer::prelude::{
     Keyword, Lexer, Literal, Operator, ParseError, PartialKeyword, Symbol, Token, TokenType,
 };
 

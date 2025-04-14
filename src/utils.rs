@@ -1,6 +1,6 @@
 //! Utility functions for this crate.
 
-use luau_lexer::prelude::{
+use lux_lexer::prelude::{
     CompoundOperator, Keyword, Literal, Operator, PartialKeyword, Symbol, TokenType,
 };
 

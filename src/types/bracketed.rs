@@ -1,4 +1,4 @@
-use luau_lexer::token::Token;
+use lux_lexer::token::Token;
 use luau_parser_derive::Range;
 
 /// An item that must be surrounded by [`brackets`](Token).

@@ -1,6 +1,6 @@
 //! All `impl` blocks for [`LocalAssignment`].
 
-use luau_lexer::prelude::{Keyword, Lexer, ParseError, Symbol, Token, TokenType};
+use lux_lexer::prelude::{Keyword, Lexer, ParseError, Symbol, Token, TokenType};
 
 use crate::types::{Expression, List, LocalAssignment, Name, Parse, Pointer, TryParse};
 

@@ -1,18 +1,18 @@
 [package]
-name = "luau-parser"
-version = "0.2.4"
+name = "lux-parser"
+version = "0.1.0"
 description = "A blazingly fast Luau parser with robust error recovery."
 edition = "2021"
 license = "MIT"
 readme = "README.md"
 keywords = ["luau", "parser"]
 
-documentation = "https://docs.rs/luau-parser"
-repository = "https://github.com/msix29/luau-parser"
-homepage = "https://github.com/msix29/luau-parser"
+# documentation = "https://docs.rs/luau-parser"
+repository = "https://github.com/lux-rbx/parser"
+homepage = "https://github.com/lux-rbx/parser"
 
 [dependencies]
-luau-lexer = { version = "0.2.4" }
+lux-lexer = { git = "https://github.com/lux-rbx/lexer" }
 luau-parser-derive = { version = "0.2.0" }
 serde = { version = "1.0.219", features = ["derive", "rc"], optional = true }
 smol_str = { version = "0.3.2" }
@@ -20,7 +20,7 @@ smol_str = { version = "0.3.2" }
 [features]
 default = ["cache"]
 cache = []
-serde = ["dep:serde", "smol_str/serde", "luau-lexer/serde"]
+serde = ["dep:serde", "smol_str/serde", "lux-lexer/serde"]
 
 [[bench]]
 name = "main"

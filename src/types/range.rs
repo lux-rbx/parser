@@ -1,6 +1,6 @@
 //! The [`Range`] struct.
 
-use luau_lexer::prelude::Position;
+use lux_lexer::prelude::Position;
 
 #[derive(Clone, Copy, Debug, Default, Hash, PartialEq, Eq, PartialOrd, Ord)]
 #[cfg_attr(feature = "serde", derive(serde::Deserialize, serde::Serialize))]

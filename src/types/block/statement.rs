@@ -3,7 +3,7 @@
 //! Module holding types that'll be used everywhere around the parser and most likely
 //! outside it too, like in a formatter or a lsp.
 
-use luau_lexer::prelude::Token;
+use lux_lexer::prelude::Token;
 use luau_parser_derive::{Print, Range};
 
 use crate::types::{
@@ -32,9 +32,9 @@ macro_rules! generate_statement {
 
         impl Statement {
             pub(crate) fn __parse(
-                token: luau_lexer::prelude::Token,
-                lexer: &mut luau_lexer::prelude::Lexer,
-                errors: &mut Vec<luau_lexer::prelude::ParseError>
+                token: lux_lexer::prelude::Token,
+                lexer: &mut lux_lexer::prelude::Lexer,
+                errors: &mut Vec<lux_lexer::prelude::ParseError>
             ) -> Option<Self> {
                 use $crate::types::Parse as _;
 

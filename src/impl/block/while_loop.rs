@@ -1,6 +1,6 @@
 //! All `impl` blocks for [`WhileLoop`].
 
-use luau_lexer::prelude::{Keyword, Lexer, ParseError, Token, TokenType};
+use lux_lexer::prelude::{Keyword, Lexer, ParseError, Token, TokenType};
 
 use crate::{
     safe_unwrap,

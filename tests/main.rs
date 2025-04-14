@@ -5,7 +5,7 @@
 //! and checks if the printed text is the same as the input. If parsing was
 //! successful, both should perfectly match.
 
-use luau_parser::prelude::Parser;
+use lux_parser::prelude::Parser;
 use std::{
     fs::{self, File},
     io::{self, Read},

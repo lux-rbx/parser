@@ -1,6 +1,6 @@
 //! All `impl` blocks for [`NumericalFor`].
 
-use luau_lexer::prelude::{Keyword, Lexer, ParseError, Symbol, Token, TokenType};
+use lux_lexer::prelude::{Keyword, Lexer, ParseError, Symbol, Token, TokenType};
 
 use crate::{
     types::{DoBlock, Expression, Name, NumericalFor, Parse, Pointer, TryParse},

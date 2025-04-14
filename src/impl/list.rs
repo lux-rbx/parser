@@ -1,6 +1,6 @@
 //! All `impl` blocks for [`List`].
 
-use luau_lexer::prelude::{Lexer, ParseError, Symbol, Token, TokenType};
+use lux_lexer::prelude::{Lexer, ParseError, Symbol, Token, TokenType};
 use std::ops::{Deref, DerefMut};
 
 use crate::types::{

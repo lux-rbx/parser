@@ -1,6 +1,6 @@
 //! Module holding all trait definitions in this crate.
 
-use luau_lexer::prelude::{Lexer, ParseError, Token};
+use lux_lexer::prelude::{Lexer, ParseError, Token};
 
 use crate::types::Range;
 

@@ -11,7 +11,7 @@
 mod benchmark_results;
 
 use benchmark_results::{BenchMarkResult, BenchMarkResults};
-use luau_parser::prelude::Parser;
+use lux_parser::prelude::Parser;
 use std::{
     fs::{self, File},
     io::{self, Read},

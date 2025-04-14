@@ -1,6 +1,6 @@
 //! All `impl` blocks for [`Block`].
 
-use luau_lexer::prelude::{Lexer, ParseError, Symbol, Token, TokenType};
+use lux_lexer::prelude::{Lexer, ParseError, Symbol, Token, TokenType};
 
 use crate::{
     types::{

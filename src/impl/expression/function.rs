@@ -6,7 +6,7 @@
 //! * [`FunctionArgument`]
 //! * [`Closure`]
 
-use luau_lexer::prelude::{Keyword, Lexer, Literal, ParseError, Symbol, Token, TokenType};
+use lux_lexer::prelude::{Keyword, Lexer, Literal, ParseError, Symbol, Token, TokenType};
 
 use crate::{
     force_parse_bracketed, parse_bracketed,

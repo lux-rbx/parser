@@ -1,6 +1,6 @@
 //! All `impl` blocks for [`Name`].
 
-use luau_lexer::prelude::{Lexer, ParseError, Symbol, Token, TokenType};
+use lux_lexer::prelude::{Lexer, ParseError, Symbol, Token, TokenType};
 use smol_str::SmolStr;
 
 use crate::types::{Name, Parse, Pointer, TryParse, TypeValue};

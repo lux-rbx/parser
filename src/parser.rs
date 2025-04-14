@@ -1,6 +1,6 @@
 //! The main item of this crate, the actual [`parser`](Parser).
 
-use luau_lexer::lexer::Lexer;
+use lux_lexer::lexer::Lexer;
 #[cfg(feature = "cache")]
 use std::collections::HashMap;
 

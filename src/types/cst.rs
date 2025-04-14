@@ -1,4 +1,4 @@
-use luau_lexer::error::ParseError;
+use lux_lexer::error::ParseError;
 use smol_str::SmolStr;
 
 use crate::types::Block;

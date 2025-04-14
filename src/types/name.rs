@@ -1,6 +1,6 @@
 //! The [`Name`] struct
 
-use luau_lexer::prelude::Token;
+use lux_lexer::prelude::Token;
 use luau_parser_derive::{Print, Range};
 
 use crate::types::{Pointer, TypeValue};

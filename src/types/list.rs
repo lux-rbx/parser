@@ -1,6 +1,6 @@
 //! A list made of any length of trailing and non-trailing items.
 
-use luau_lexer::prelude::Token;
+use lux_lexer::prelude::Token;
 
 use crate::types::Bracketed;
 

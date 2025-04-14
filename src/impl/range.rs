@@ -1,6 +1,6 @@
 //! All impl blocks for [`Range`].
 
-use luau_lexer::prelude::Position;
+use lux_lexer::prelude::Position;
 
 use crate::types::Range;
 

@@ -1,6 +1,6 @@
 //! Types representing all valid Luau expressions.
 
-use luau_lexer::prelude::Token;
+use lux_lexer::prelude::Token;
 use luau_parser_derive::{Print, Range};
 
 use crate::types::{Bracketed, Pointer, Table, TypeValue};

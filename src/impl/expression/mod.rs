@@ -4,7 +4,7 @@ mod function;
 mod table;
 mod var;
 
-use luau_lexer::prelude::{
+use lux_lexer::prelude::{
     Keyword, Lexer, Literal, Operator, ParseError, Symbol, Token, TokenType,
 };
 

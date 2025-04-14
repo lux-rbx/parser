@@ -1,6 +1,6 @@
 //! Module holding all possible blocks in Luau (excluding functions).
 
-use luau_lexer::prelude::Token;
+use lux_lexer::prelude::Token;
 
 use crate::types::Pointer;
 

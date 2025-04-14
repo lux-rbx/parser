@@ -1,6 +1,6 @@
 //! Module holding if statements and all related items.
 
-use luau_lexer::prelude::Token;
+use lux_lexer::prelude::Token;
 use luau_parser_derive::{Print, Range};
 
 use crate::types::{Block, Expression, Pointer};

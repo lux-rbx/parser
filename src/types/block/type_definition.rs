@@ -2,7 +2,7 @@
 //!
 //! Module containing definition for type definitions.
 
-use luau_lexer::prelude::Token;
+use lux_lexer::prelude::Token;
 use luau_parser_derive::{Print, Range};
 
 use crate::types::{Bracketed, BracketedList, Expression, FunctionCall, Name, Pointer, Table, Var};

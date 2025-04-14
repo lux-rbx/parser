@@ -1,6 +1,6 @@
 //! Holding all needed information for tables.
 
-use luau_lexer::prelude::Token;
+use lux_lexer::prelude::Token;
 use luau_parser_derive::{Print, Range};
 use smol_str::SmolStr;
 

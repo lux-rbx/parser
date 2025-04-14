@@ -2,7 +2,7 @@
 
 mod parse;
 
-/// Handles [`TokenType::Error`](luau_lexer::prelude::TokenType::Error).
+/// Handles [`TokenType::Error`](lux_lexer::prelude::TokenType::Error).
 ///
 /// # Usage
 ///

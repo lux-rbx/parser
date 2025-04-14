@@ -50,7 +50,7 @@ macro_rules! next_token_recoverable_with_condition {
         let mut $name = $lexer.next_token();
         if !$condition {
             $errors.push(
-                luau_lexer::prelude::ParseError::new(
+                lux_lexer::prelude::ParseError::new(
                     state.lexer_position(),
                     format!(
                         "{} found {}",
@@ -62,7 +62,7 @@ macro_rules! next_token_recoverable_with_condition {
                 .into(),
             );
 
-            $name = luau_lexer::prelude::Token {
+            $name = lux_lexer::prelude::Token {
                 start: state.lexer_position(),
                 leading_trivia: Vec::new(),
                 token_type: $replacement,

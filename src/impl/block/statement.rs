@@ -1,6 +1,6 @@
 //! All `impl` blocks for [`Statement`] and [`TerminationStatement`].
 
-use luau_lexer::prelude::{Keyword, Lexer, ParseError, PartialKeyword, Token, TokenType};
+use lux_lexer::prelude::{Keyword, Lexer, ParseError, PartialKeyword, Token, TokenType};
 
 use crate::{
     handle_error_token,

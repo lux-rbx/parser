@@ -1,6 +1,6 @@
 //! All `impl` blocks for [`Bracketed`].
 
-use luau_lexer::prelude::{Lexer, ParseError, State, Symbol, Token, TokenType};
+use lux_lexer::prelude::{Lexer, ParseError, State, Symbol, Token, TokenType};
 use std::ops::{Deref, DerefMut};
 
 use crate::{

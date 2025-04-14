@@ -12,11 +12,11 @@ mod r#impl;
 pub mod parser;
 pub mod types;
 mod utils;
-pub use luau_lexer;
+pub use lux_lexer;
 
 /// Loads all needed items for outside crates to use.
 pub mod prelude {
     pub use crate::parser::*;
     pub use crate::types::*;
-    pub use luau_lexer::prelude::{Comment, *};
+    pub use lux_lexer::prelude::{Comment, *};
 }

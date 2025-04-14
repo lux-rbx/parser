@@ -4,7 +4,7 @@
 //! * [`GlobalFunction`]
 //! * [`GlobalFunctionName`]
 
-use luau_lexer::prelude::{Keyword, Lexer, ParseError, PartialKeyword, Symbol, Token, TokenType};
+use lux_lexer::prelude::{Keyword, Lexer, ParseError, PartialKeyword, Symbol, Token, TokenType};
 
 use crate::{
     force_parse_bracketed, parse_bracketed,
