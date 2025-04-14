@@ -27,6 +27,7 @@ pub(crate) fn get_token_type_display(token_type: &TokenType) -> &str {
         TokenType::EndOfFile => "<eof>",
         TokenType::Error(_) => "<error>",
         TokenType::Comment(_) => "<comment>",
+        TokenType::MacroIdentifier(_) => "<macro identifier>",
     }
 }
 
@@ -83,6 +84,8 @@ pub(crate) fn get_token_type_display_extended(token_type: &TokenType) -> &str {
             Symbol::Typecast => "<typecast>",
             Symbol::Equal => "`=`",
             Symbol::At => "`@`",
+            Symbol::MacroInvocation => "`!`",
+            Symbol::MacroIdentifierStarter => "`$`",
         },
         TokenType::Operator(operator) => match operator {
             Operator::Plus => "`+`",
@@ -118,5 +121,6 @@ pub(crate) fn get_token_type_display_extended(token_type: &TokenType) -> &str {
         TokenType::EndOfFile => "<eof>",
         TokenType::Error(_) => "<error>",
         TokenType::Comment(_) => "<comment>",
+        TokenType::MacroIdentifier(_) => "<macro identifier>",
     }
 }
