@@ -5,6 +5,8 @@ use luau_parser_derive::{Print, Range};
 
 use crate::types::{Bracketed, Pointer, Table, TypeValue};
 
+use super::MacroInvocation;
+
 reexport!(table, var, function);
 
 /// A struct representing an expression wrapped in parenthesis.
@@ -152,6 +154,13 @@ pub enum Expression {
 
     /// An if expression.
     IfExpression(IfExpression),
+
+    /// A macro invocation.
+    ///
+    /// ```lua
+    /// macro_name!(...tokens)
+    /// ```
+    MacroInvocation(MacroInvocation),
 }
 
 /// A struct representing an elseif **expression**, only exists in variable declarations.

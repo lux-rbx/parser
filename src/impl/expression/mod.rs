@@ -4,16 +4,14 @@ mod function;
 mod table;
 mod var;
 
-use lux_lexer::prelude::{
-    Keyword, Lexer, Literal, Operator, ParseError, Symbol, Token, TokenType,
-};
+use lux_lexer::prelude::{Keyword, Lexer, Literal, Operator, ParseError, Symbol, Token, TokenType};
 
 use crate::{
     handle_error_token, parse_bracketed, safe_unwrap,
     types::{
         Bracketed, Closure, ElseIfExpression, Expression, ExpressionWrap, FunctionArguments,
-        FunctionCall, FunctionCallInvoked, IfExpression, Parse, ParseWithArgs, Pointer, PrefixExp,
-        Table, TableAccess, TableAccessPrefix, TryParse, TypeValue, Var,
+        FunctionCall, FunctionCallInvoked, IfExpression, MacroInvocation, Parse, ParseWithArgs,
+        Pointer, PrefixExp, Table, TableAccess, TableAccessPrefix, TryParse, TypeValue, Var,
     },
     utils::get_token_type_display,
 };
@@ -126,6 +124,9 @@ impl Expression {
         match token.token_type {
             TokenType::Error(error) => handle_error_token!(errors, error),
             TokenType::Literal(_) => Self::parse_from_literal(token),
+            TokenType::MacroIdentifier(_) => {
+                MacroInvocation::parse(token, lexer, errors).map(Self::MacroInvocation)
+            }
             TokenType::Identifier(_)
             | TokenType::PartialKeyword(_)
             | TokenType::Symbol(Symbol::OpeningParenthesis) => {

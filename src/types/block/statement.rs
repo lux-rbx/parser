@@ -7,9 +7,7 @@ use lux_lexer::prelude::Token;
 use luau_parser_derive::{Print, Range};
 
 use crate::types::{
-    CompoundSetExpression, DoBlock, Expression, FunctionCall, GenericFor, GlobalFunction,
-    IfStatement, List, LocalAssignment, LocalFunction, NumericalFor, Pointer, RepeatBlock,
-    SetExpression, TypeDefinition, TypeFunction, WhileLoop,
+    CompoundSetExpression, DoBlock, Expression, FunctionCall, GenericFor, GlobalFunction, IfStatement, List, LocalAssignment, LocalFunction, MacroInvocation, NumericalFor, Pointer, RepeatBlock, SetExpression, TypeDefinition, TypeFunction, WhileLoop
 };
 
 /// Helper macro to generate the [`Statement`] enum.
@@ -191,6 +189,13 @@ generate_statement! {
     /// type qux = Bar<Foo<boolean>> -- number | string | boolean
     /// ```
     TypeFunction(TypeFunction),
+
+    /// A macro invocation.
+    ///
+    /// ```lua
+    /// macro_name!(...tokens)
+    /// ```
+    MacroInvocation(MacroInvocation),
 }
 
 /// An enum representing different types of statements that can end a block of code.
